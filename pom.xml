@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+    <modelVersion>4.0.0</modelVersion>
+    
+    <groupId>ru.xxlabaza.milada</groupId>
+    <artifactId>beep-color</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+    
+    <name>Beep Color Game</name>
+    <description>
+        Simple game with random generating colors and sounds
+    </description>
+
+    <developers>
+        <developer>
+            <name>Artem Labazin</name>
+            <email>artem.labazin@gmail.com</email>
+        </developer>
+    </developers>
+    <inceptionYear>2016</inceptionYear>
+    
+    <properties>
+        <java.version>1.8</java.version>
+        <start-class>ru.xxlabaza.milada.beep.color.Main</start-class>
+        
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <netbeans.hint.license>My_Apache2</netbeans.hint.license>
+    </properties>
+    
+    <build>
+        <plugins>
+             <plugin>
+                <groupId>com.zenjava</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>8.4.0</version>
+                <configuration>
+                    <vendor>Artem Labazin</vendor>
+                    <noBlobSigning>true</noBlobSigning>
+                    <mainClass>${start-class}</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.8</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+</project>
